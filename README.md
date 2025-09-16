@@ -33,13 +33,14 @@ $ uv pip install uvicorn httpx fastapi python-multipart
 ```bash
     uvicorn image_file_server:app –host 0.0.0.0 –port 8484
 ```
-3.  画像生成 API サーバーを起動：
+2.  画像生成 API サーバーを起動：
 ```bash
     FILE_SERVER=“http://localhost:8484” uvicorn qwen_nunchaku_imaging_api:app –host 127.0.0.1 –port 8444
 ```
 
 ## 画像生成・編集の方法 ##
-  curlをつかった使い方を https://github.com/takago/flux_imaging_api に紹介していますので，参考にしてください．
+ 
+  curlをつかった使い方 https://github.com/takago/flux_imaging_api に紹介していますので，そちらを参考にしてください．
 
 
 ----------
