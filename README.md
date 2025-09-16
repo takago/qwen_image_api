@@ -1,8 +1,8 @@
 # Qwen Imaging API
 Educational imaging API server using Qwen+Nunchaku (generation, editing with OpenAI-compatible endpoints.
 
-  * Nunchakuエンジン(v1.0)を用いたQwen-Image/Qwen-Image-Editサーバです．
-  * VRAM消費を抑えつつ，早い画像生成が期待できます．
+  * Nunchakuエンジン(v1.0)を用いたQwen-Image/Qwen-Image-Edit（lightning）サーバです
+  * VRAM消費を抑えつつ，高速な画像生成が可能です．
   * OpenAI-Image API互換のエンドポイントを持っているので，「OpenWebUI」などからも利用できます．
   * Image-Editの入力画像は，ローカルファイルだけでなく，ネットワーク上のファイルも指定可能です．
        
