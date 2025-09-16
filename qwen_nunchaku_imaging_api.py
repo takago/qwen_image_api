@@ -1,7 +1,7 @@
 # ============================================================
-#  qwen_imaging_api.py
+#  qwen_nunchaku_imaging_api.py
 #
-#  Imaging API Server with Qwen-Image Pipelines
+#  Imaging API Server with Qwen-Image Pipelines + Nunchaku
 #    - Generate (Qwen-Image)
 #    - Edit (Qwen-Image-Edit)
 #    - Original API + OpenAI Image API compatible endpoints
