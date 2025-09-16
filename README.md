@@ -37,7 +37,7 @@ $ conda activate nunchaku
 ```bash
     (nunchaku)$ FILE_SERVER=“http://localhost:8484” uvicorn qwen_nunchaku_imaging_api:app --host 127.0.0.1 --port 8444
 ```
-（リモートから使えるようにする場合はCaddy等でSSL化した方がよいでしょう）
+（リモートから使う場合はCaddy等でSSL化した方がよいでしょう）
 
 
 ## 画像生成・編集の方法 ##
