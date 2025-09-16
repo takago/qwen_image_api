@@ -31,7 +31,7 @@ $ conda activate nunchaku
 
 1.  ファイルサーバーを起動：
 ```bash
-    (nunchaku)$ uvicorn image_file_server:app --host 0.0.0.0 --port 8484
+    (nunchaku)$ uvicorn image_file_server:app --host 127.0.0.1 --port 8484
 ```
 2.  画像生成 API サーバーを起動：
 ```bash
