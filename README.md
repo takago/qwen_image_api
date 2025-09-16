@@ -1,4 +1,4 @@
-# qwen_image_api
+# Qwen Imaging API
 Educational imaging API server using Qwen+Nunchaku (generation, editing with OpenAI-compatible endpoints.
 
   * Nunchakuエンジンを用いたQwen-Image/Qwen-Image-Editサーバを作りました．
