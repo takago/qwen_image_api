@@ -3,7 +3,7 @@ Educational imaging API server using Qwen+Nunchaku (generation, editing with Ope
 
   * Nunchakuエンジン(v1.0)を用いたQwen-Image/Qwen-Image-Editサーバです．
   * VRAM消費を抑えつつ，早い画像生成が期待できます．
-  * OpenAI-Image API互換のエンドポイントを持っているので，OpenWebUIなどからも利用できます．
+  * OpenAI-Image API互換のエンドポイントを持っているので，「OpenWebUI」などからも利用できます．
   * Image-Editの入力画像は，ローカルファイルだけでなく，ネットワーク上のファイルも指定可能です．
        
   * 実行には https://github.com/takago/flux_imaging_api/blob/main/image_file_server.py も必要です．
@@ -44,7 +44,7 @@ $ conda activate nunchaku
 
 ## 画像生成・編集の方法 ##
  
-  curlをつかった使い方 https://github.com/takago/flux_imaging_api に紹介していますので，そちらを参考にしてください．
+  https://github.com/takago/flux_imaging_api を参考にしてください．
 
 
 ----------
