@@ -48,7 +48,7 @@ $ conda activate nunchaku
 
 
 ----------
-## Thanks ##
+## 深謝 ##
 - Qwen-Image: https://huggingface.co/Qwen/Qwen-Image
 - Qwen-Image-Edit: https://huggingface.co/Qwen/Qwen-Image-Edit
 - diffusers: https://github.com/huggingface/diffusers
