@@ -1,7 +1,7 @@
 # Qwen Imaging API
 Educational imaging API server using Qwen+Nunchaku (generation, editing with OpenAI-compatible endpoints.
 
-  * Nunchakuエンジン(v1.0)を用いたQwen-Image/Qwen-Image-Editサーバを作りました．
+  * Nunchakuエンジン(v1.0)を用いたQwen-Image/Qwen-Image-Editサーバです．
   * VRAM消費を抑えつつ，早い画像生成が期待できます．
   * OpenAI-Image API互換のエンドポイントを持っているので，OpenWebUIなどからも利用できます．    
   * 実行には https://github.com/takago/flux_imaging_api/blob/main/image_file_server.py も必要です．
@@ -35,7 +35,7 @@ $ conda activate nunchaku
 ```
 2.  画像生成 API サーバーを起動：
 ```bash
-    (nunchaku)$ FILE_SERVER=“http://localhost:8484” uvicorn qwen_nunchaku_imaging_api:app --host 127.0.0.1 --port 8444
+    (nunchaku)$ FILE_SERVER="http://localhost:8484" uvicorn qwen_nunchaku_imaging_api:app --host 127.0.0.1 --port 8444
 ```
 （リモートから使う場合はCaddy等でSSL化した方がよいでしょう）
 
