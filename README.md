@@ -1,10 +1,9 @@
 # Qwen Imaging API
 Educational imaging API server using Qwen+Nunchaku (generation, editing with OpenAI-compatible endpoints.
 
-  * Nunchakuエンジンを用いたQwen-Image/Qwen-Image-Editサーバを作りました．
+  * Nunchakuエンジン(v1.0)を用いたQwen-Image/Qwen-Image-Editサーバを作りました．
   * VRAM消費を抑えつつ，早い画像生成が期待できます．
-  * OpenAI-Image API互換のエンドポイントを持っているので，OpenWebUIなどからも利用できます．
-  * CaddyでSSL接続して使うことをおすすめします．
+  * OpenAI-Image API互換のエンドポイントを持っているので，OpenWebUIなどからも利用できます．    
   * 実行には https://github.com/takago/flux_imaging_api/blob/main/image_file_server.py も必要です．
 
 
@@ -31,12 +30,14 @@ $ uv pip install uvicorn httpx fastapi python-multipart
 
 1.  ファイルサーバーを起動：
 ```bash
-    uvicorn image_file_server:app –host 0.0.0.0 –port 8484
+    uvicorn image_file_server:app --host 0.0.0.0 --port 8484
 ```
 2.  画像生成 API サーバーを起動：
 ```bash
-    FILE_SERVER=“http://localhost:8484” uvicorn qwen_nunchaku_imaging_api:app –host 127.0.0.1 –port 8444
+    FILE_SERVER=“http://localhost:8484” uvicorn qwen_nunchaku_imaging_api:app --host 127.0.0.1 --port 8444
 ```
+（リモートから使えるようにする場合はCaddy等でSSL化した方がよいでしょう）
+
 
 ## 画像生成・編集の方法 ##
  
@@ -44,11 +45,10 @@ $ uv pip install uvicorn httpx fastapi python-multipart
 
 
 ----------
-## 謝辞 ##
-
-本プロジェクトの開発にあたり，以下のプロジェクト・コミュニティの成果に深く感謝いたします．
-- Qwen: 高性能な基盤モデルの提供に感謝します．
-- Nunchaku: 効率的な推論エンジンの提供に感謝します．
-- OpenAI: API 仕様とエコシステムの提供に感謝します．
-
-
+## Thanks ##
+- Qwen-Image: https://huggingface.co/Qwen/Qwen-Image
+- Qwen-Image-Edit: https://huggingface.co/Qwen/Qwen-Image-Edit
+- diffusers: https://github.com/huggingface/diffusers
+- Nunchaku: https://github.com/nunchaku-tech/nunchaku
+- OpenAI: https://openai.com/
+- Hugging Face: https://huggingface.co/
