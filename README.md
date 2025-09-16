@@ -14,15 +14,16 @@ Educational imaging API server using Qwen+Nunchaku (generation, editing with Ope
 
 ```bash
 $ conda create -n nunchaku -c conda-forge python=3.11 gcc_linux-64=11 gxx cuda-toolkit=12.8 cmake
-$ conda activate nunchaku $ pip install uv
-$ uv pip install "torch==2.8" torchvision --index-url https://download.pytorch.org/whl/cu128
-$ uv pip install -U xformers --index-url https://download.pytorch.org/whl/cu128
-$ uv pip install triton sageattention $ uv pip install controlnet_aux dwpose matplotlib
-$ uv pip install gguf protobuf imageio imageio-ffmpeg
-$ uv pip install "accelerate>=0.26.0" transformers bitsandbytes peft sentencepiece
-$ uv pip install git+https://github.com/huggingface/diffusers.git "peft>=0.17.0"
-$ uv pip install https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.0/nunchaku-1.0.0+torch2.8-cp311-cp311-linux_x86_64.whl 
-$ uv pip install uvicorn httpx fastapi python-multipart
+$ conda activate nunchaku
+(nunchaku)$ pip install uv
+(nunchaku)$ uv pip install "torch==2.8" torchvision --index-url https://download.pytorch.org/whl/cu128
+(nunchaku)$ uv pip install -U xformers --index-url https://download.pytorch.org/whl/cu128
+(nunchaku)$ uv pip install triton sageattention $ uv pip install controlnet_aux dwpose matplotlib
+(nunchaku)$ uv pip install gguf protobuf imageio imageio-ffmpeg
+(nunchaku)$ uv pip install "accelerate>=0.26.0" transformers bitsandbytes peft sentencepiece
+(nunchaku)$ uv pip install git+https://github.com/huggingface/diffusers.git "peft>=0.17.0"
+(nunchaku)$ uv pip install https://github.com/nunchaku-tech/nunchaku/releases/download/v1.0.0/nunchaku-1.0.0+torch2.8-cp311-cp311-linux_x86_64.whl 
+(nunchaku)$ uv pip install uvicorn httpx fastapi python-multipart
 ```
 
 
@@ -30,11 +31,11 @@ $ uv pip install uvicorn httpx fastapi python-multipart
 
 1.  ファイルサーバーを起動：
 ```bash
-    uvicorn image_file_server:app --host 0.0.0.0 --port 8484
+    (nunchaku)$ uvicorn image_file_server:app --host 0.0.0.0 --port 8484
 ```
 2.  画像生成 API サーバーを起動：
 ```bash
-    FILE_SERVER=“http://localhost:8484” uvicorn qwen_nunchaku_imaging_api:app --host 127.0.0.1 --port 8444
+    (nunchaku)$ FILE_SERVER=“http://localhost:8484” uvicorn qwen_nunchaku_imaging_api:app --host 127.0.0.1 --port 8444
 ```
 （リモートから使えるようにする場合はCaddy等でSSL化した方がよいでしょう）
 
