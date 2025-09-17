@@ -20,7 +20,7 @@ $ conda activate nunchaku
 (nunchaku)$ pip install uv
 (nunchaku)$ uv pip install "torch==2.8" torchvision --index-url https://download.pytorch.org/whl/cu128
 (nunchaku)$ uv pip install -U xformers --index-url https://download.pytorch.org/whl/cu128
-(nunchaku)$ uv pip install triton sageattention $ uv pip install controlnet_aux dwpose matplotlib
+(nunchaku)$ uv pip install triton sageattention
 (nunchaku)$ uv pip install gguf protobuf imageio imageio-ffmpeg
 (nunchaku)$ uv pip install "accelerate>=0.26.0" transformers bitsandbytes peft sentencepiece
 (nunchaku)$ uv pip install git+https://github.com/huggingface/diffusers.git "peft>=0.17.0"
